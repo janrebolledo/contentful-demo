@@ -27,6 +27,8 @@ When deploying the website, make sure to add these to your enviroment variables
 
 ### Running Locally
 
+Make sure all of your packages are installed and up to date with `npm install`
+
 To run this project locally you can use
 
 `npm run dev`
