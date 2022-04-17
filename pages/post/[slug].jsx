@@ -39,8 +39,8 @@ export async function getStaticProps({ params }) {
 function ProjectPage({ post }) {
   const { title, coverImage, date, content } = post.fields;
   return (
-    <div>
-      <Link href="/">back</Link>
+    <main>
+      <Link href="/">&larr; back</Link>
       <h1>{title}</h1>
       <p>project date: {date}</p>
       {coverImage && (
@@ -50,7 +50,7 @@ function ProjectPage({ post }) {
         className="project-content"
         dangerouslySetInnerHTML={{ __html: marked(content) }}
       />
-    </div>
+    </main>
   );
 }
 

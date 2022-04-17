@@ -18,10 +18,10 @@ export async function getStaticProps() {
 
 function index({ posts }) {
   return (
-    <div>
-      <h2>very cool blog :&#41;</h2>
+    <main>
+      <h2>contentful site</h2>
       <PostList posts={posts} />
-    </div>
+    </main>
   );
 }
 

@@ -8,7 +8,6 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {
@@ -16,5 +15,9 @@ a {
 }
 
 img {
-  width: 240px;
+  width: 100%;
+}
+
+main {
+  padding: 4% 10%;
 }
