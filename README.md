@@ -9,7 +9,7 @@ To start this project, you must have
 
 ### Content Model
 
-![Content Model](/public/Content Model.png)
+![Content Model](/public/ContentModel.png)
 
 > Note:  
 > If you'd like to change the content model, you have to mess around with `Post.jsx` & `[slug].jsx` and edit the imports
