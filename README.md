@@ -36,3 +36,7 @@ To run this project locally you can use
 or
 
 `yarn dev`
+
+#### Credits
+
+Heavily based off of The Net Ninja's [Next.js + Contentful series](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1)
