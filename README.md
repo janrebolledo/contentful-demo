@@ -14,6 +14,10 @@ To start this project, you must have
 > Note:  
 > If you'd like to change the content model, you have to mess around with `Post.jsx` & `[slug].jsx` and edit the imports
 
+![Variables](/public/Variables.png)
+
+Edit `Variables.jsx` to change the name of the site, it handles SEO.
+
 ### Enviroment Variables
 
 Create a `.env.local` file in the root directory and with this set up.
