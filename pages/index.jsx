@@ -1,5 +1,7 @@
+import Head from "next/head";
 import PostList from "../components/PostList";
 import { createClient } from "contentful";
+import { variables } from "../components/Variables";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -19,7 +21,10 @@ export async function getStaticProps() {
 function index({ posts }) {
   return (
     <main>
-      <h2>contentful site</h2>
+      <Head>
+        <title>{variables.name}</title>
+      </Head>
+      <h2>{variables.name}</h2>
       <PostList posts={posts} />
     </main>
   );

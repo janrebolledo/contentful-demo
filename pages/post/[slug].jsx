@@ -1,7 +1,9 @@
 import React from "react";
+import Head from "next/head";
 import { createClient } from "contentful";
 import { marked } from "marked";
 import Link from "next/link";
+import { variables } from "../../components/Variables";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -40,6 +42,33 @@ function ProjectPage({ post }) {
   const { title, coverImage, date, content } = post.fields;
   return (
     <main>
+      <Head>
+        <title>
+          {variables.name} — {title}
+        </title>
+        <meta name="description" content={excerpt} />
+        {/* Facebook Tags */}
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={variables.name + " — " + title} />
+        <meta property="og:description" content={excerpt} />
+        <meta
+          property="og:image"
+          content={"https:" + coverImage.fields.file.url}
+        />
+
+        {/* Twitter Tags */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:title"
+          content={variables.name + " — " + title}
+        />
+        <meta property="twitter:description" content={excerpt} />
+        <meta
+          property="twitter:image"
+          content={"https:" + coverImage.fields.file.url}
+        />
+      </Head>
       <Link href="/">&larr; back</Link>
       <h1>{title}</h1>
       <p>project date: {date}</p>
