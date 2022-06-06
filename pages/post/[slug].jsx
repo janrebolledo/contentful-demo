@@ -39,7 +39,7 @@ export async function getStaticProps({ params }) {
 }
 
 function ProjectPage({ post }) {
-  const { title, coverImage, date, content } = post.fields;
+  const { title, coverImage, date, content, excerpt } = post.fields;
   return (
     <main>
       <Head>
