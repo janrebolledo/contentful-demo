@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { createClient } from "contentful";
 import { marked } from "marked";
+import { getPlaiceholder } from "plaiceholder";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -25,16 +26,21 @@ async function ProjectPage({ params }) {
   const res = { post: items[0] };
   const post = res.post;
   const { title, coverImage, date, content } = post.fields;
+  const { base64, img } = await getPlaiceholder(
+    "https:" + coverImage.fields.file.url
+  );
   return (
     <main>
       <h1>{title}</h1>
       <p>Post Date: {date}</p>
       <Image
-        src={"https:" + coverImage.fields.file.url}
+        src={img}
         alt={coverImage.fields.title}
         width={16}
         height={9}
         sizes="80vw"
+        placeholder="blur"
+        blurDataURL={base64}
       />
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
     </main>
