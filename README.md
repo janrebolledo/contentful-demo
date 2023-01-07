@@ -1,5 +1,7 @@
 # Next.js 13 Contentful Blog
 
+Site is live [here](https://contentful-demo-janrebolledo.vercel.app/).
+
 > ⚠️ Caution:  
 > This project uses `appDir`, an experimental feature of Next.js 13.
 
