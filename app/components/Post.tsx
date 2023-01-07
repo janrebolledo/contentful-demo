@@ -1,18 +1,24 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getPlaiceholder } from "plaiceholder";
 
-function Post({ post }) {
+async function Post({ post }) {
   const { title, slug, coverImage, date, excerpt } = post.fields;
+  const { base64, img } = await getPlaiceholder(
+    "https:" + coverImage.fields.file.url
+  );
   return (
     <div>
       <h2>{title}</h2>
       <Image
-        src={"https:" + coverImage.fields.file.url}
-        alt={"https:" + coverImage.fields.title}
+        src={img}
+        alt={coverImage.fields.title}
         width={16}
         height={9}
-        sizes="70vw"
+        sizes="80vw"
+        placeholder="blur"
+        blurDataURL={base64}
       />
       <small>{date}</small>
       <p>{excerpt}</p>

@@ -1,5 +1,7 @@
+const { withPlaiceholder } = require("@plaiceholder/next");
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withPlaiceholder({
   reactStrictMode: true,
   experimental: {
     appDir: true,
@@ -7,6 +9,6 @@ const nextConfig = {
   images: {
     domains: ["images.ctfassets.net"],
   },
-};
+});
 
 module.exports = nextConfig;

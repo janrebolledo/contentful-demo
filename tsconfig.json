@@ -13,14 +13,21 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "components/Post.js",
-    "app/page.jsx"
+    "app/page.jsx",
+    ".next/types/**/*.ts",
+    "app/components/PostList.jsx"
   ],
   "exclude": ["node_modules"]
 }

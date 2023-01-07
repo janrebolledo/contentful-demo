@@ -1,18 +1,35 @@
-# Contentful CMS Site
+# Next.js 13 Contentful Blog
+
+> ⚠️ Caution:  
+> This project uses `appDir`, an experimental feature of Next.js 13.
 
 To start this project, you must have
 
 1. A [Contentful](https://contentful.com) account and space
 2. Node & NPM installed
 
+## Lighthouse Report
+
+![Lighthouse report](/public/Lighthouse.png)
+
+SEO is handled through `head.js`.
+
 ## Project Setup
+
+### Project Dependencies
+
+Blog content is pulled from Contentful CMS, the default `contentful` package is used.
+
+Blog content is written in markdown. Markdown processor `marked` is used to display content.
+
+`Plaiceholder` is used to have blurred image placeholders.
 
 ### Content Model
 
 ![Content Model](/public/ContentModel.png)
 
 > Note:  
-> If you'd like to change the content model, you have to mess around with `Post.jsx` & `[slug].jsx` and edit the imports
+> If you change the content model, you have to edit with `Post.jsx` & `[slug].jsx` and edit the imports
 
 ![Variables](/public/Variables.png)
 
@@ -40,7 +57,3 @@ To run this project locally you can use
 or
 
 `yarn dev`
-
-#### Credits
-
-Heavily based off of The Net Ninja's [Next.js + Contentful series](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1)

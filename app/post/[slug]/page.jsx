@@ -31,10 +31,10 @@ async function ProjectPage({ params }) {
       <p>Post Date: {date}</p>
       <Image
         src={"https:" + coverImage.fields.file.url}
-        alt={"https:" + coverImage.fields.title}
+        alt={coverImage.fields.title}
         width={16}
         height={9}
-        sizes="70vw"
+        sizes="80vw"
       />
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
     </main>
